@@ -1,0 +1,154 @@
+<!--
+
+=========================================================
+* Impact Design System - v1.0.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/impact-design-system
+* Copyright 2010 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/impact-design-system/blob/master/LICENSE.md)
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+--><!DOCTYPE html>
+<html lang="en">
+<head><!-- Primary Meta Tags --><title>P5 Hackathon</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta name="title" content="P5 Hackathon"><!-- Canonical SEO -->
+
+    <link rel="icon" href="https://demos.creative-tim.com/impact-design-system/front/assets/img/favicon/favicon.png" type="image/png"><!-- Fontawesome -->
+    <link type="text/css" href="https://demos.creative-tim.com/impact-design-system/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+    <!-- Nucleo icons -->
+    <link rel="stylesheet" href="https://demos.creative-tim.com/impact-design-system/dashboard/assets/vendor/nucleo/css/nucleo.css" type="text/css"><!-- Prism -->
+
+    <link type="text/css" href="https://demos.creative-tim.com/impact-design-system/vendor/prismjs/themes/prism.css" rel="stylesheet"><!-- Front CSS -->
+
+    <link type="text/css" href="https://demos.creative-tim.com/impact-design-system/front/css/front.css" rel="stylesheet"><!-- Anti-flicker snippet (recommended)  -->
+    <style>
+        .async-hide {
+        opacity: 0 !important
+        }
+    </style>
+</head>
+<body>
+
+<main>
+    <div class="preloader bg-soft flex-column justify-content-center align-items-center">
+        <div class="loader-element"><span class="loader-animated-dot"></span>&nbsp;&nbsp;Loading</div>
+    </div><!-- Hero -->
+    <section class="section-header pb-8 pb-lg-13 mb-4 mb-lg-6 bg-primary text-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 text-center"><h1 class="display-2 mb-3">Statistics India</h1>
+                    <p class="lead">An overview of current data
+                        <br>
+                        <a href="https://api.rootnet.in/covid19-in/stats">Source</a></p></div>
+            </div>
+        </div>
+        <div class="pattern bottom"></div>
+    </section>
+    <section class="section section-lg pt-0">
+        <div class="container mt-n7 mt-lg-n13 z-2">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-4">
+                    <div class="card shadow-soft bg-white border-light animate-up-3 text-gray py-4 mb-5 mb-lg-0">
+                        <div class="card-header text-center pb-0">
+                            <div class="icon icon-shape icon-shape-primary rounded-circle mb-3"><i
+                                    class="fas fa-bullhorn"></i></div>
+                            <h4 class="text-black">Positive</h4>
+                            <p>India</p></div>
+                        <div class="card-body">
+                            <h3 class="display-3 mb-4 text-center">{{ positive }}</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="card shadow-soft bg-white border-light animate-up-3 text-gray py-4 mb-5 mb-lg-0">
+                        <div class="card-header text-center pb-0">
+                            <div class="icon icon-shape icon-shape-primary rounded-circle mb-3"><i
+                                    class="far fa-lightbulb"></i></div>
+                            <h4 class="text-black">Deaths</h4>
+                            <p>India</p></div>
+                        <div class="card-body">
+                            <h3 class="display-3 mb-4 text-center">{{ deaths }}</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="card shadow-soft bg-white border-light animate-up-3 text-gray py-4 mb-5 mb-lg-0">
+                        <div class="card-header text-center pb-0">
+                            <div class="icon icon-shape icon-shape-primary rounded-circle mb-3"><i
+                                    class="fas fa-receipt"></i></div>
+                            <h4 class="text-black">Recovered</h4>
+                            <p>India</p></div>
+                        <div class="card-body">
+                            <h3 class="display-3 mb-4 text-center">{{ discharged }}</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section-lg pt-0 line-bottom-light">
+        <div class="container">
+            <div class="row justify-content-center mb-5 mb-lg-6">
+                <div class="col-12 col-md-8 text-center"><h1 class="display-3 mb-4">Input Your Image</h1>
+                    <p class="lead">Upload your image to process</p></div>
+            </div>
+            <div class="row">
+                <div class="px-lg-0">
+                    <div class="row">
+                        <div class="col-lg"></div>
+
+                        <div class="col-lg-100">
+                            <div class="bg-soft shadow-soft border-light">
+                                <div class="card-body"><h4 class="mb-10">Choose Your Image</h4>
+                                    <p class="my-6">File box here</p></div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="col-lg"><!--spacer--></div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <footer class="footer section pt-6 pt-md-8 pt-lg-10 pb-3 bg-primary text-white overflow-hidden">
+        <div class="pattern pattern-soft top"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0"><a class="footer-brand mr-lg-5 d-flex" href="/">
+                    <p class="my-4">Team Tahiti</p></a>
+                </div>
+            </div>
+            <hr class="my-4 my-lg-5">
+            <div class="row">
+                <div class="col pb-4 mb-md-0">
+                    <div class="d-flex text-center justify-content-center align-items-center"><p
+                            class="font-weight-normal mb-0">© <a href="#" target="_blank">Team Tahiti</a> <span class="current-year"></span>. All
+                        rights reserved.</p></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</main><!-- Core -->
+<script src="https://demos.creative-tim.com/impact-design-system/vendor/jquery/dist/jquery.min.js"></script>
+<script src="https://demos.creative-tim.com/impact-design-system/vendor/popper.js/dist/umd/popper.min.js"></script>
+<script src="https://demos.creative-tim.com/impact-design-system/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="https://demos.creative-tim.com/impact-design-system/vendor/headroom.js/dist/headroom.min.js"></script>
+<!-- Vendor JS -->
+<script src="https://demos.creative-tim.com/impact-design-system/vendor/onscreen/dist/on-screen.umd.min.js"></script>
+<script src="https://demos.creative-tim.com/impact-design-system/vendor/waypoints/lib/jquery.waypoints.min.js"></script>
+<script src="https://demos.creative-tim.com/impact-design-system/vendor/jarallax/dist/jarallax.min.js"></script>
+<script src="https://demos.creative-tim.com/impact-design-system/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer="defer" src="https://buttons.github.io/buttons.js"></script><!-- Impact JS -->
+<script src="https://demos.creative-tim.com/impact-design-system/front/assets/js/front.js"></script>
+</body>
+</html>
