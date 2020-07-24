@@ -46,53 +46,27 @@
     <section class="section-header pb-8 pb-lg-13 mb-4 mb-lg-6 bg-primary text-white">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-12 col-md-8 text-center"><h1 class="display-2 mb-3">Statistics India</h1>
-                    <p class="lead">An overview of current data
-                        <br>
-                        <a href="https://api.rootnet.in/covid19-in/stats">Source</a></p></div>
+                <div class="col-12 col-md-8 text-center"><h1 class="display-2 mb-3">Result of Patient</h1>
+                    <p class="lead">{{ name }}</p>
+                </div>
             </div>
         </div>
         <div class="pattern bottom"></div>
     </section>
-    <section class="section section-lg pt-0">
+        <section class="section section-lg pt-0">
         <div class="container mt-n7 mt-lg-n13 z-2">
             <div class="row justify-content-center">
+
                 <div class="col-12 col-lg-4">
                     <div class="card shadow-soft bg-white border-light animate-up-3 text-gray py-4 mb-5 mb-lg-0">
                         <div class="card-header text-center pb-0">
                             <div class="icon icon-shape icon-shape-primary rounded-circle mb-3"><i
                                     class="fas fa-bullhorn"></i></div>
-                            <h4 class="text-black">Positive</h4>
-                            <p>India</p></div>
-                        <div class="card-body">
-                            <h3 class="display-3 mb-4 text-center count" id="positive">{{ positive }}</h3>
+                            <h4 class="text-black">{{ result|upper }}</h4>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-4">
-                    <div class="card shadow-soft bg-white border-light animate-up-3 text-gray py-4 mb-5 mb-lg-0">
-                        <div class="card-header text-center pb-0">
-                            <div class="icon icon-shape icon-shape-primary rounded-circle mb-3"><i
-                                    class="far fa-lightbulb"></i></div>
-                            <h4 class="text-black">Deaths</h4>
-                            <p>India</p></div>
-                        <div class="card-body">
-                            <h3 class="display-3 mb-4 text-center count" id="deaths">{{ deaths }}</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-4">
-                    <div class="card shadow-soft bg-white border-light animate-up-3 text-gray py-4 mb-5 mb-lg-0">
-                        <div class="card-header text-center pb-0">
-                            <div class="icon icon-shape icon-shape-primary rounded-circle mb-3"><i
-                                    class="fas fa-receipt"></i></div>
-                            <h4 class="text-black">Recovered</h4>
-                            <p>India</p></div>
-                        <div class="card-body">
-                            <h3 class="display-3 mb-4 text-center count" id="discharged">{{ discharged }}</h3>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>

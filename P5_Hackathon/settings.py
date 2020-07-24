@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'covid.apps.CovidConfig',
+    'django_cleanup',
 ]
 
 MIDDLEWARE = [

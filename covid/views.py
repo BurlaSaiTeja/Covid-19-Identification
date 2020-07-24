@@ -38,13 +38,14 @@ def make_prediction(request):
         form = InputForm(request.POST, request.FILES)
         if form.is_valid():
             patient_name = form.cleaned_data.get("name")
-            image_input = form.cleaned_data.get("image")
+            image_input_form = form.cleaned_data.get("image")
 
-            TestStatus.objects.create(name=patient_name,
-                                      image=image_input)
+            form_file = TestStatus.objects.create(name=patient_name,
+                                                  image=image_input_form,
+                                                  status="")
 
             image_input = image.load_img(os.path.join(MEDIA_ROOT,
-                                                      image_input.name),
+                                                      image_input_form.name),
                                          target_size=(300, 300))
             image_input = np.asarray(image_input)
             image_input = np.expand_dims(image_input, axis=0)
@@ -56,7 +57,9 @@ def make_prediction(request):
             if output[0][0] > output[0][1]:
                 print("Positive")
 
-            model = Model(inputs=model_file.inputs, outputs=outputs)
+            TestStatus.objects.filter(id=form_file.id).update(status=status)
+
+            """model = Model(inputs=model_file.inputs, outputs=outputs)
 
             img = img_to_array(image_input)
             img = expand_dims(img, axis=0)
@@ -72,8 +75,10 @@ def make_prediction(request):
                     ax.set_yticks([])
                     pyplot.imshow(fmap[0, :, :, ix - 1], cmap='gray')
                     ix += 1
-                pyplot.show()
+                pyplot.show()"""
 
             return render(request, "result.html", {
+                "form": InputForm(),
+                "name": patient_name,
                 "result": status
             })
