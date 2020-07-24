@@ -1,2 +1,4 @@
 Django~=3.0.8
 requests~=2.24.0
+numpy~=1.19.0
+Keras~=2.4.3
