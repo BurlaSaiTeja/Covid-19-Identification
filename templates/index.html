@@ -15,6 +15,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 --><!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head><!-- Primary Meta Tags --><title>P5 Hackathon</title>
     <meta charset="utf-8">
@@ -121,9 +122,31 @@
                             </div>
                         </div>
                     </div>
-                        <div class="col-lg"><!--spacer--></div>
-                    </div>
+                    <div class="col-lg"><!--spacer--></div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-lg pt-0 line-bottom-light">
+        <div class="container">
+            <div class="row justify-content-center mb-5 mb-lg-6">
+                <div class="col-12 col-md-8 text-center"><h1 class="display-3 mb-4">Our Model</h1>
+                    <p class="lead">Model Architecture</p></div>
+            </div>
+            <div class="row">
+
+
+                <div class="col-md-4">
+                    <img src="{% static 'model_plot.png' %}" alt="Model Architecture" width="1000" height="1000">
+                </div>
+
+
+                <div class="col-md-4">
+                    <iframe src="{% static 'network.gv.pdf' %}" width="1000" height="1000"></iframe>
+                </div>
+
+            </div>
         </div>
     </section>
 

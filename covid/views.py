@@ -1,20 +1,14 @@
 import os
-from django.shortcuts import render
-import requests
 
-from P5_Hackathon import model_file, outputs
+import numpy as np
+import requests
+from django.shortcuts import render
+from keras.preprocessing import image
+
+from P5_Hackathon import model_file
 from P5_Hackathon.settings import MEDIA_ROOT
 from covid.forms import InputForm
 from covid.models import TestStatus
-
-import numpy as np
-from keras.preprocessing import image
-from keras.applications.imagenet_utils import preprocess_input
-from keras.preprocessing.image import load_img
-from keras.preprocessing.image import img_to_array
-from keras.models import Model
-from matplotlib import pyplot
-from numpy import expand_dims
 
 
 def home(request):
@@ -55,7 +49,7 @@ def make_prediction(request):
             status = "Negative"
 
             if output[0][0] > output[0][1]:
-                print("Positive")
+                status = "Positive"
 
             TestStatus.objects.filter(id=form_file.id).update(status=status)
 
