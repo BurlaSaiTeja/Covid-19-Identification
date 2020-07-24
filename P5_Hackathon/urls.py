@@ -22,7 +22,8 @@ from covid import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", views.home, name="home")
+    path("", views.home, name="home"),
+    path("predict/", views.make_prediction, name="predict"),
 ]
 
 if settings.DEBUG:
