@@ -100,6 +100,50 @@
                 </div>
         </div>
     </section>
+    
+    <section class="section section-lg pt-0 line-bottom-light">
+        <div class="container">
+            <div class="row justify-content-center mb-5 mb-lg-6">
+                <div class="col-12 col-md-8 text-center"><h1 class="display-3 mb-4">Results</h1>
+                    <p class="lead">Tested Patients</p></div>
+            </div>
+            <div class="row justify-content-center mb-5 mb-lg-6">
+                <div class="px-lg-0">
+                    <div class="row">
+                        <div class="col-lg"></div>
+
+                                <table class="table">
+                                    <thead>
+                                        <td>Name</td>
+                                        <td>Image</td>
+                                        <td>Status</td>
+                                    </thead>
+                                    <tbody>
+                                        {% for patient in status %}
+                                            <tr>
+                                            <td>{{ patient.name }}</td>
+                                            <td><img src="http://vbox:8000/media/{{ patient.image }}" style="height: 18rem;"></td>
+                                            <td> <div
+                                                {% if patient.status == "Positive" %}
+                                                    class="p-3 mb-2 bg-danger text-white">
+                                                    {% else %}
+                                                    class="p-3 mb-2 bg-success text-white">
+                                                {% endif %}
+                                                {{ patient.status }}
+                                            </div>
+                                            </td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+
+                    </div>
+                        <div class="col-lg"><!--spacer--></div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
 
     <footer class="footer section pt-6 pt-md-8 pt-lg-10 pb-3 bg-primary text-white overflow-hidden">
         <div class="pattern pattern-soft top"></div>
