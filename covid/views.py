@@ -21,6 +21,7 @@ def home(request):
 
     return render(request, "index.html", {
         "form": form,
+        "status": result,
         "deaths": deaths,
         "positive": positive,
         "discharged": discharged
@@ -52,9 +53,12 @@ def make_prediction(request):
                 status = "Positive"
 
             TestStatus.objects.filter(id=form_file.id).update(status=status)
+            
+            result = TestStatus.objects.all()
 
             return render(request, "result.html", {
                 "form": InputForm(),
+                "status": result,
                 "name": patient_name,
                 "result": status
             })
